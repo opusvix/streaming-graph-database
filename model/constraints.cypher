@@ -1,0 +1,29 @@
+// USERS
+CREATE CONSTRAINT user_id_unique IF NOT EXISTS
+FOR (u:User)
+REQUIRE u.userId IS UNIQUE;
+
+// MOVIES
+CREATE CONSTRAINT movie_id_unique IF NOT EXISTS
+FOR (m:Movie)
+REQUIRE m.movieId IS UNIQUE;
+
+// SERIES
+CREATE CONSTRAINT series_id_unique IF NOT EXISTS
+FOR (s:Series)
+REQUIRE s.seriesId IS UNIQUE;
+
+// GENRES
+CREATE CONSTRAINT genre_name_unique IF NOT EXISTS
+FOR (g:Genre)
+REQUIRE g.name IS UNIQUE;
+
+// ACTORS
+CREATE CONSTRAINT actor_name_unique IF NOT EXISTS
+FOR (a:Actor)
+REQUIRE a.name IS UNIQUE;
+
+// DIRECTORS
+CREATE CONSTRAINT director_name_unique IF NOT EXISTS
+FOR (d:Director)
+REQUIRE d.name IS UNIQUE;
